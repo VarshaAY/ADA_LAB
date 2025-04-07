@@ -10,29 +10,29 @@ int a[15000],n, i,j,ch, temp;
 clock_t start,end;
 while(1)
 {
-printf(&quot;\n1:For manual entry of N value and array elements&quot;);
-printf(&quot;\n2:To display time taken for sorting number of elements N in the range 500 to 14500&quot;);
-printf(&quot;\n3:To exit&quot;);
-printf(&quot;\nEnter your choice:&quot;);
-scanf(&quot;%d&quot;, &amp;ch);
+printf("\n1:For manual entry of N value and array elements");
+printf("\n2:To display time taken for sorting number of elements N in the range 500 to 14500");
+printf("\n3:To exit");
+printf("\nEnter your choice:");
+scanf("%d",&ch);
 switch(ch)
 {
-case 1: printf(&quot;\nEnter the number of elements: &quot;);
+case 1: printf("\nEnter the number of elements:");
 
-scanf(&quot;%d&quot;,&amp;n);
-printf(&quot;\nEnter array elements: &quot;);
-for(i=0;i&lt;n;i++)
+scanf("%d",&n);
+printf("\nEnter array elements: ");
+for(i=0;i<n;i++)
 {
-scanf(&quot;%d&quot;,&amp;a[i]);
+scanf("%d",&a[i]);
 }
 start=clock();
 split(a,0,n-1);
 end=clock();
-printf(&quot;\nSorted array is: &quot;);
-for(i=0;i&lt;n;i++)
-printf(&quot;%d\t&quot;,a[i]);
+printf("\nSorted array is: ");
+for(i=0;i<n;i++)
+printf("%d\t",a[i]);
 
-printf(&quot;\n Time taken to sort %d numbers is %f Secs&quot;,n, (((double)(end-start))/CLOCKS_PER_SEC));
+printf("\n Time taken to sort %d numbers is %f Secs",n, (((double)(end-start))/CLOCKS_PER_SEC));
 
 break;
 
